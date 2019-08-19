@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style type="text/css">
+a
+{
+color:blue;
+}
+a:hover
+{
+color:green;
+}
+</style>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server">
+               
+       &nbsp;<div style="float: right; font-family: Verdana; font-size: small">        
+           
+            <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="#CC3300" 
+                PostBackUrl="~/Home.aspx">Home|</asp:LinkButton>&nbsp;
+            <asp:LinkButton ID="LinkButton1" runat="server" 
+                PostBackUrl="~/OnlineQuery.aspx" ForeColor="#CC3300">Online Query|</asp:LinkButton>&nbsp;
+            <asp:LinkButton ID="LinkButton4" runat="server" ForeColor="#CC3300" 
+                onclick="LinkButton4_Click">Admin login</asp:LinkButton>&nbsp;
+                  
+         
+            </div>
+            <br />
+            
+             &nbsp;
+        
+        
+        <div style="width: 100%; background-color:#FF9900; font-family: Verdana; font-size: small;
+            color: White;">
+            <center>
+                <asp:Label ID="Label1" runat="server" Text="Search" ForeColor="#CC3300"></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server" Height="24px"></asp:TextBox>
+                <asp:ImageButton ID="ImageButton1" ImageUrl="~/Images/Button Search.png" runat="server"
+                     Height="22px" onclick="ImageButton1_Click" />
+                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+            </center>
+        </div>
+
+        <div style="background-color:#CC3300; width: 100%">
+            <center>
+                <asp:LinkButton ID="LinkButton7" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server" onclick="LinkButton7_Click">Home |</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton3" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server" onclick="LinkButton3_Click" >Contact Us |</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton8" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server" onclick="LinkButton8_Click">BollyWood Songs |</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton9" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server">Artist |</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton10" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server" onclick="LinkButton10_Click">Video Songs |</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton11" ForeColor="#FF9900" Font-Names="verdana" Font-Size="Small"
+                    runat="server" onclick="LinkButton11_Click">Online Query</asp:LinkButton>
+                    
+                  
+            </center>
+        </div>
+        <table width="100%">
+            <tr width="100%">
+                <td style="width: 71%">
+                    <div style="vertical-align: top; float: left; width: 773px; padding:2px 2px 2px 2px">
+                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();"><img src="Images/crop_110x110_134079.jpg" alt="" /><img src="Images/crop_110x110_135542.jpg" alt="" /><img src="Images/crop_110x110_135562.jpg" alt="" /><img src="Images/crop_110x110_135564.jpg" alt=""/><img src="Images/crop_110x110_136291.jpg" alt=""/><img src="Images/crop_110x110_136947.jpg" alt=""/><img src="Images/crop_110x110_136977.jpg" alt=""/><img src="Images/crop_110x110_46.jpg" alt=""/><img src="Images/crop_110x110_943834.jpg" alt=""/></marquee>
+                    </div>
+                </td>
+                <td style="width: 50%">
+                    <div style="float: right; width: 271px;">
+                    <img src="Images/41de08a26c3a58b3a274a084a3ed6120.gif" width="100%" />
+                     <img src="Images/carspk.gif" width="100%"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="float: right;">
+        </div>
+        <table width="100%">
+            <tr width="100%">
+                <td style="width: 20%; vertical-align: top">
+                    <asp:LinkButton ID="LinkButton13" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300"
+                        >Home</asp:LinkButton><br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton14" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300" PostBackUrl="~/ContactUs.aspx"
+                        >Contact Us</asp:LinkButton><br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton15" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300" onclick="LinkButton15_Click"
+                        >Bollywood Movie Songs</asp:LinkButton><br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton16" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300"
+                        >Artist</asp:LinkButton><br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton17" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300" onclick="LinkButton17_Click"
+                        >Video Songs</asp:LinkButton><br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton18" Font-Names="verdana" Font-Size="Small" 
+                        runat="server" ForeColor="#CC3300" onclick="LinkButton18_Click"
+                        >Online Query</asp:LinkButton><br />
+                    <br />
+                    <br />
+                 
+                </td>
+                <td style="width: 80%">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                       
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <div id="divcopy" runat="server" style="vertical-align: bottom">
+            <hr style="color: #3366ff" />
+            <table width="100%">
+                <tr>
+                    <td style="width: 100%; font-family: Verdana; font-size: small; font-weight: bold;
+                        color: Blue">
+                        <center>
+                            ©Online Music Store.com. All Right Reserved.</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 100%; font-family: Verdana; color:#CC3300; font-size: x-small; font-weight: bold;
+                        color: Blue">
+                        <center>
+                            Online Music Store.com SRM INSTITUTE OF SCIENCE AND TECHNOLOGY. +91-591-2472808, +91-591-2472809.
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
